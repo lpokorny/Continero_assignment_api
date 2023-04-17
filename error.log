@@ -1,0 +1,6 @@
+Error logging examples created by simulated errors:
+
+2023-04-17 17:06:37,335 ERROR Expected 10 links to be printed, but got 5 links, there is probably not enough matching images
+2023-04-17 17:07:07,952 ERROR No video link found in the collection
+2023-04-17 17:07:45,858 ERROR API get request failed
+2023-04-17 17:07:46,321 ERROR API get request failed

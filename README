@@ -1,0 +1,37 @@
+1)
+
+values used in parameters are defined on Class level for convenience, if there were to be more tests, with diverse values,
+it might be a better idea to hardcode the data in each test or to move them into separate file
+where we would define all values we want to use for each parameter in a list
+
+
+2)
+
+There could be other asserts depending on what we are trying to test,
+but I don't want to crowd the test if I'm not specifically asked for it in assignment
+
+Example:
+
+for link in printed_links:
+    try:
+        assert link.endswith(".jpg")
+    except AssertionError:
+        logger.error(
+            "Link might not be an image as it doesn't end with '.jpg', manual inspection needed")
+        raise
+
+3)
+
+to align with assigned task, assert on line 60 should be asserting, that 5 photos are printed, but I want it to be parametrized
+and modular, so we can change page size and print any desired number of links without raising assert exception
+
+4)
+
+'Also, check that NASA records with keyword Mars taken in 2018 with media_type="video" includes !!only!! links to videos'
+'Hint: search results includes a collection of links, which has to !!contain!! link to video file type'
+
+- this part of assignment feels  poorly described... it might have two meanings:
+Either we are to assert, that only video links should be present in the record including collection.json of the record,
+or we are to assert, that between all the links in the record and its collection.json, there should be some video link/s
+
+I decided to satisfy the second option, as it makes more sense to me and will make a passing test
